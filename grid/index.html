@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Bento Portafolio · Grid</title>
+<title>Fernanda Kauak - Mi Bento Portafolio · Grid</title>
 <style>
   /* ====== Pequeño reset, NO lo borres ====== */
   *,*::before,*::after{ box-sizing:border-box; }
@@ -11,12 +11,16 @@
 
   /* ====== 🎨 ESCRIBE AQUÍ TU CSS CON GRID ====== */
   /* Pista: la cuadrícula vive en .bento; cada tarjeta es .box */
+  body {
+    background: linear-gradient(180deg, #680750, #310327);
+  }
   .bento {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(4, 1fr));
     gap: 10px;
-    grid-auto-rows: minmax(120px, 180px);
+    grid-auto-rows: minmax(120px, 180px); 
   } 
+
   .box {
     background: purple;
     padding: 2%;
@@ -26,40 +30,91 @@
   .intro {
     grid-column: span 2;
     grid-row: span 2;
+    display: grid;
+    text-align: center;
+    align-items: center;
   }
 
   .proyecto {
     grid-column: span 2;
   }
-   
+
+  .foto {
+    display: grid;
+    place-items: center;
+  }
+
+  .frase {
+    display: grid;
+    place-items: center;
+    font-style: italic;
+  }
+
+  .skills {
+    display: grid;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contacto a {
+    color: white;
+    font-weight: bold;
+  }
+
+  .color1 {
+    background-color: #310327;
+  }
+
+  .color2 {
+    background-color: gray;
+  }
+
+  .color3 {
+    background-color: #200446;
+  }
+
+  .color4 {
+    background-color: rgb(51, 17, 107);
+  }
+
+  .color5 {
+    background-color: white;
+    color: purple;
+  }
 
 </style>
 </head>
 <body>
   <main class="bento">
 
-    <section class="box intro">
-      <h1>Hola, soy Tu Nombre 👋</h1>
-      <p>Desarrollador/a web</p>
+    <section class="box intro color1">
+      <h1>Hola, soy Fernanda Kauak 👋</h1>
+      <p>Diseñador gráfico web aprendiendo front-end.</p>
+      <p>También he estudiado sobre marketing digital y manejo de proyectos, además de haber creado actividades como charlas o talleres.</p>
+      <h2>¡Te doy la bienvenida a mi portafolio mientras aprendo grid!</h1>
     </section>
 
-    <section class="box foto">🖼️</section>
+    <section class="box foto color2">
+      <img src="avatar.png" alt="avatar" width="170" />
+    </section>
 
-    <section class="box skills">
+    <section class="box skills color3">
       <h2>Skills</h2>
       <p>HTML · CSS · JavaScript</p>
     </section>
 
-    <section class="box proyecto">
+    <section class="box proyecto color4">
       <h2>Proyecto destacado</h2>
-      <p>Describe tu mejor proyecto en una frase.</p>
+      <p>Mi portafolio de diseño y de dibujo son proyectos destacados en sí mismos y quiero crear más cosas.</p>
     </section>
 
-    <section class="box frase">"Una cita que te inspire"</section>
+    <section class="box frase color5">"Un segundo de reflexión puede llevarte a la luna, la menor duda puede hacerte caer en llamas" (Covenant - Call the Ships to Port)</section>
 
-    <section class="box contacto">
+    <section class="box contacto color6">
       <h2>Contacto</h2>
-      <p>tu@email.com</p>
+      <p>correo@gmail.com</p>
+      <a href="https://github.com/fernandakauak">GitHub</a>
+      <a href="https://www.fernandakauak.cl">Portafolio</a>
     </section>
 
   </main>
