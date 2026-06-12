@@ -11,7 +11,27 @@
 
   /* ====== 🎨 ESCRIBE AQUÍ TU CSS CON GRID ====== */
   /* Pista: la cuadrícula vive en .bento; cada tarjeta es .box */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(120px, 180px);
+  } 
+  .box {
+    background: purple;
+    padding: 2%;
+    border-radius: 20px;
+  }
 
+  .intro {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .proyecto {
+    grid-column: span 2;
+  }
+   
 
 </style>
 </head>
