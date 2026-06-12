@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Bio Card · Flexbox</title>
+<style>
+  /* ====== Pequeño reset, NO lo borres ====== */
+  *,*::before,*::after{ box-sizing:border-box; }
+  body{ margin:0; font-family:system-ui,Segoe UI,Roboto,sans-serif; background:#0f172a; color:#e2e8f0; }
+  a{ text-decoration:none; color:inherit; }
+
+  /* ====== 🎨 ESCRIBE AQUÍ TU CSS CON FLEXBOX ====== */
+  /* Pista: empieza por .escenario y .card */
+  body {
+    background-image: url("bg.jpg");
+    background-size: auto;
+  }
+
+  .escenario {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    border-radius: 5%;
+    max-width: 50%;
+    padding: 1%;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #004baf, #032757);
+    gap: 10px;
+    min-height: 500px;
+    box-shadow:inset 5px 5px 5px white, 5px 5px 5px rgb(2, 2, 36);
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .link { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #3f4e57, #0c0a0a);
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  } 
+
+  .foot {
+    margin-top: auto;
+  }
+  
+  .avatar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .avatar img {
+    border-radius: 250px;
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+  }
+
+  .name {
+    margin: 0;
+  }
+
+  .bio {
+    text-align: center;
+    font-size: 18px;
+  }
+
+</style>
+</head>
+<body>
+  <div class="escenario">
+    <main class="card">
+
+      <div class="avatar"><img src="avatar.jpg" alt=""avatar /></div>
+      <h1 class="name">Fernanda Kauak</h1>
+      <p class="bio">En estos momentos Fer no puede responderle, pero uno de sus personajes lo hará. Deje su mensaje después de la señal.</p>
+
+      <section class="stats">
+        <div class="stat"><b>1.2k</b><span>Seguidores</span></div>
+        <div class="stat"><b>34</b><span>Proyectos</span></div>
+        <div class="stat"><b>8.9k</b><span>Likes</span></div>
+      </section>
+
+      <nav class="links">
+        <a href="#" class="link destacado">🌟 Mi proyecto estrella</a>
+        <a href="https://www.fernandakauak.cl/" class="link">💼 Portafolio</a>
+        <a href="#" class="link">📝 Blog</a>
+        <a href="#" class="link">📺 YouTube</a>
+      </nav>
+
+      <div class="social">
+        <a href="#">IG</a>
+        <a href="#">X</a>
+        <a href="#">in</a>
+        <a href="https://github.com/fernandakauak">GH</a>
+      </div>
+
+      <footer class="foot">Hecho con 💙 y Flexbox... a lo Schumacher</footer>
+
+    </main>
+  </div>
+</body>
+</html>
